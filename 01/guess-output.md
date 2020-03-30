@@ -11,6 +11,9 @@ console.log("Hey You!");
 ```
 
  output
+ Hey You!
+ Hey You Called Me
+
 
 2.
 ```js
@@ -23,6 +26,8 @@ setTimeout(sayHello, 0);
 console.log("Hey You!");
 ```
  output
+ Hey You!
+ Hey You Called Me
 
 3.
 ```js
@@ -36,6 +41,9 @@ function main() {
 main();
 ```
  output
+ A
+ C
+ B
 
 4.
 ```js
@@ -54,8 +62,15 @@ function main() {
   runWhileLoopForNSeconds(3);
   console.log("C");
 }
+main();
 
  output
+ A
+ C
+ undefined
+ B
+
+```
 
 5. Look at the output of the code below to understand hwo things are happening.
 
@@ -76,7 +91,11 @@ function main() {
   runWhileLoopForNSeconds(3);
   console.log("C", Date.now() - current);
 }
-
 main();
+output: 
+A 0 
+undefined
+C 3003
+B 3015
 
 ```
